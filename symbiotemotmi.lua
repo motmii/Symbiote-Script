@@ -65,7 +65,7 @@ Overlay.Parent = SG
 
 local Card = Instance.new("Frame")
 Card.Name = "Card"
-Card.Size = UDim2.new(0, 460, 0, 260) -- صغرت الارتفاع شوي لعدم وجود مربع النص
+Card.Size = UDim2.new(0, 460, 0, 260)
 Card.Position = UDim2.new(0.5, -230, 0.5, -130)
 Card.BackgroundColor3 = T.Background
 Card.BorderSizePixel = 0
@@ -202,7 +202,7 @@ Desc.ZIndex = 3
 Desc.Parent = Content
 
 local SubmitBtn = Instance.new("TextButton")
-SubmitBtn.Size = UDim2.new(1, 0, 0, 45) -- خليت الزر بحجم كامل
+SubmitBtn.Size = UDim2.new(1, 0, 0, 45)
 SubmitBtn.Position = UDim2.new(0, 0, 0, 60)
 SubmitBtn.BackgroundColor3 = T.Accent
 SubmitBtn.BorderSizePixel = 0
@@ -277,8 +277,8 @@ SubmitBtn.MouseButton1Click:Connect(function()
 
     -- محاولة تشغيل السكربت الأساسي
     local success, err = pcall(function()
-        -- ⚠️ مهم جداً: حط رابط الـ RAW حقك الجديد هنا بين علامتي التنصيص ⚠️
-        https://raw.githubusercontent.com/motmii/Symbiote-Script/refs/heads/main/symbiotemotmi.lua
+        -- التعديل صار هنا، حطينا الرابط داخل دالة التشغيل
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/motmii/Symbiote-Script/refs/heads/main/symbiotemotmi.lua"))()
     end)
 
     if success then
@@ -291,7 +291,7 @@ SubmitBtn.MouseButton1Click:Connect(function()
         -- إذا فشل التشغيل، نطلع لك رسالة خطأ
         SubmitBtn.Text = "Error! Check F9"
         tw(SubmitBtn, {BackgroundColor3 = T.Error}, 0.2)
-        warn("خطأ في تشغيل السكربت الأساسي: " .. tostring(err)) -- هذا بيطبع الخطأ في كونسول اللعبة
+        warn("خطأ في تشغيل السكربت الأساسي: " .. tostring(err))
         
         task.wait(3)
         SubmitBtn.Active = true
