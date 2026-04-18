@@ -278,7 +278,7 @@ SubmitBtn.MouseButton1Click:Connect(function()
     -- محاولة تشغيل السكربت الأساسي
     local success, err = pcall(function()
         -- ⚠️ مهم جداً: حط رابط الـ RAW حقك الجديد هنا بين علامتي التنصيص ⚠️
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/sssssssss21/Symbiote/refs/heads/main/symbiote.lua"))()
+        https://raw.githubusercontent.com/motmii/Symbiote-Script/refs/heads/main/symbiotemotmi.lua
     end)
 
     if success then
